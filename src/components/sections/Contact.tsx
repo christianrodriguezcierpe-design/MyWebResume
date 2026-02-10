@@ -9,7 +9,7 @@ const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 mb-10">
-            Open to opportunities in IT Project Coordination, PMO Analysis, and Software Delivery Management
+            Open to opportunities in Software Delivery Management and IT Project Coordination
           </p>
           
           <div className="flex flex-col gap-4 mb-10">
