@@ -10,12 +10,42 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Lang>("en");
+const STORAGE_KEY = "lang";
+const DEFAULT_LANG: Lang = "en";
 
-  // Keep the document language attribute in sync (accessibility / SEO).
+const isLang = (value: unknown): value is Lang => value === "en" || value === "es";
+
+// Precedence: an explicit past choice, then the browser's preference, then EN.
+// Wrapped in try/catch — storage access throws outright in some privacy modes.
+const initialLang = (): Lang => {
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (isLang(stored)) return stored;
+  } catch {
+    // Ignore and fall through to the browser preference.
+  }
+
+  const preferred = window.navigator.languages ?? [window.navigator.language];
+  for (const tag of preferred) {
+    const base = tag?.split("-")[0]?.toLowerCase();
+    if (isLang(base)) return base;
+  }
+
+  return DEFAULT_LANG;
+};
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const [lang, setLang] = useState<Lang>(initialLang);
+
+  // Keep the document language attribute in sync (accessibility / SEO)
+  // and remember the choice for the next visit.
   useEffect(() => {
     document.documentElement.lang = lang;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      // Persisting is a convenience; the site works fine without it.
+    }
   }, [lang]);
 
   const toggle = () => setLang((prev) => (prev === "en" ? "es" : "en"));
