@@ -88,3 +88,49 @@ describe("index.html fallback", () => {
     }
   });
 });
+
+describe("social preview image", () => {
+  const root = resolve(__dirname, "../..");
+  const html = readFileSync(resolve(root, "index.html"), "utf-8");
+
+  const tagContent = (attr: string) =>
+    html.match(new RegExp(`<meta ${attr} content="([^"]*)"`))?.[1];
+
+  const SITE = "https://christianrodriguezcierpe-design.github.io/MyWebResume/";
+
+  it("declares an image for both og and twitter", () => {
+    // twitter:card promises summary_large_image; without an image the preview
+    // renders bare, which is the failure this guards against.
+    expect(html).toContain('content="summary_large_image"');
+    expect(tagContent('property="og:image"')).toBe(`${SITE}og-image.png`);
+    expect(tagContent('name="twitter:image"')).toBe(`${SITE}og-image.png`);
+  });
+
+  it("uses absolute URLs, which crawlers do not resolve relatively", () => {
+    for (const attr of ['property="og:image"', 'name="twitter:image"', 'property="og:url"']) {
+      expect(tagContent(attr)).toMatch(/^https:\/\//);
+    }
+  });
+
+  it("ships the image the tags point at", () => {
+    const file = resolve(root, "public/og-image.png");
+    const png = readFileSync(file);
+
+    // PNG signature, then IHDR carries width/height as big-endian uint32s.
+    expect(png.subarray(1, 4).toString()).toBe("PNG");
+    expect(png.readUInt32BE(16)).toBe(1200);
+    expect(png.readUInt32BE(20)).toBe(630);
+  });
+
+  it("declares the dimensions the file actually has", () => {
+    const png = readFileSync(resolve(root, "public/og-image.png"));
+
+    expect(tagContent('property="og:image:width"')).toBe(String(png.readUInt32BE(16)));
+    expect(tagContent('property="og:image:height"')).toBe(String(png.readUInt32BE(20)));
+  });
+
+  it("gives the image alt text", () => {
+    expect(tagContent('property="og:image:alt"')).toBeTruthy();
+    expect(tagContent('name="twitter:image:alt"')).toBeTruthy();
+  });
+});

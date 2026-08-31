@@ -74,6 +74,31 @@ the browser's `navigator.languages` preference, then English. The choice is save
 on every change and `<html lang>` is kept in sync for accessibility and SEO.
 Theme is handled by `next-themes` and likewise persists; the site defaults to light.
 
+## Social preview image
+
+`public/og-image.png` is the 1200x630 card shown when the site is shared on
+LinkedIn, Slack, WhatsApp, and similar. Its source is `design/og-image.svg`;
+edit that and re-render:
+
+```sh
+npx sharp-cli@5 --input design/og-image.svg --output public/ --format png resize 1200 630
+```
+
+`sharp-cli` is intentionally not a project dependency — it is only needed on the
+rare occasions the card changes. The SVG uses generic font families with common
+fallbacks so the render does not depend on Inter or Playfair being installed
+locally.
+
+Tests assert that the dimensions declared in `index.html` match the file on
+disk, so a re-render at a different size fails rather than silently breaking
+previews.
+
+Note the `og:` and `twitter:` tags in `index.html` are always the English ones,
+whatever language a visitor picks. Social crawlers read the served HTML without
+running JavaScript, so localizing previews for real would need prerendered
+per-language pages. The runtime metadata swap fixes the browser tab for the
+person reading the site, not the crawler.
+
 ## CI and deployment
 
 - **`.github/workflows/ci.yml`** — runs lint → test → build on every pull request
