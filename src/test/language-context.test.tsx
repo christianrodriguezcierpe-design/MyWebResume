@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, act } from "@testing-library/react";
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
+import { content } from "@/lib/content";
 
 // Reports the resolved language and exposes the toggle, so the tests can assert
 // on initial resolution and on what a change writes back to storage.
@@ -76,6 +77,8 @@ describe("LanguageProvider", () => {
     expect(shown()).toBe("es");
     expect(window.localStorage.getItem("lang")).toBe("es");
     expect(document.documentElement.lang).toBe("es");
+    // Proves the provider is wired to applyDocumentMeta, not just setting lang.
+    expect(document.title).toBe(content.es.meta.title);
   });
 
   it("still renders when storage is unavailable", () => {

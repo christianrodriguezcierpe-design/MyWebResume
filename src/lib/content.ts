@@ -38,6 +38,11 @@ export interface LanguageEntry {
 }
 
 export interface SiteContent {
+  // Drives the document title and description tags; see lib/documentMeta.ts.
+  meta: {
+    title: string;
+    description: string;
+  };
   hero: {
     greeting: string;
     role: string;
@@ -75,6 +80,11 @@ export interface SiteContent {
 
 export const content: Record<Lang, SiteContent> = {
   en: {
+    meta: {
+      title: "Christian Rodriguez | IT Project Coordinator",
+      description:
+        "Christian Rodriguez — IT Project Coordinator and Software Delivery Specialist with 10+ years of experience in banking, public sector, and automotive industries.",
+    },
     hero: {
       greeting: "Hello, I'm",
       role: "Project Coordinator & PMO Specialist",
@@ -230,6 +240,11 @@ export const content: Record<Lang, SiteContent> = {
   },
 
   es: {
+    meta: {
+      title: "Christian Rodriguez | Coordinador de Proyectos TI",
+      description:
+        "Christian Rodriguez — Coordinador de Proyectos TI y Especialista en Entrega de Software con más de 10 años de experiencia en banca, sector público e industria automotriz.",
+    },
     hero: {
       greeting: "Hola, soy",
       role: "Coordinador de Proyectos y Especialista PMO",

@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { content, Lang, SiteContent } from "@/lib/content";
+import { applyDocumentMeta } from "@/lib/documentMeta";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -37,10 +38,10 @@ const initialLang = (): Lang => {
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLang] = useState<Lang>(initialLang);
 
-  // Keep the document language attribute in sync (accessibility / SEO)
+  // Keep the document language and page metadata in sync (accessibility / SEO)
   // and remember the choice for the next visit.
   useEffect(() => {
-    document.documentElement.lang = lang;
+    applyDocumentMeta(lang, content[lang].meta);
     try {
       window.localStorage.setItem(STORAGE_KEY, lang);
     } catch {
