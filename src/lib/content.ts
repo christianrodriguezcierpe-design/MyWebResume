@@ -111,15 +111,17 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           title: "Agile & Waterfall",
-          description: "Ceremonies, sprint planning, tracking, and traditional delivery support",
+          description:
+            "Fluent across hybrid delivery models, adapting Agile and Waterfall practices to fit each project and its stakeholders",
         },
         {
           title: "Documentation & Governance",
-          description: "Minutes, action items, audits, and compliance with standards",
+          description:
+            "Rigorous project documentation and governance that keep delivery auditable, compliant, and transparent",
         },
         {
           title: "Process Improvement",
-          description: "Lean mindset, continuous improvement, and compliance-oriented execution",
+          description: "Lean-informed continuous improvement that raises delivery quality, consistency, and efficiency",
         },
       ],
     },
@@ -128,8 +130,8 @@ export const content: Record<Lang, SiteContent> = {
       subtitle: "A decade of coordinating software delivery across banking, public sector, and automotive",
       roles: [
         {
-          title: "Career Transition — Relocation to Chile",
-          company: "Open to Project Coordinator / PMO roles",
+          title: "Relocation to Chile",
+          company: "Open to new opportunities — Project Coordination, PMO & beyond",
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Present",
           highlights: [
@@ -143,9 +145,9 @@ export const content: Record<Lang, SiteContent> = {
           period: "Aug 2022 – Nov 2025",
           highlights: [
             "Conducted scheduled compliance audits against local and international safety standards, documenting findings and tracking each issue through to closure",
-            "Contributed to Lean continuous-improvement initiatives — standardized work, waste reduction, and process discipline on the production line",
-            "Owned quality documentation and reporting for critical safety processes — applying the same governance discipline used in PMO status and issue tracking",
-            "Managed corrective-action follow-up end to end: escalated non-conformances and verified resolution (directly analogous to RAID / issue management)",
+            "Contributed to Lean continuous-improvement initiatives — standardized work, waste reduction, and process discipline",
+            "Owned quality documentation and reporting for critical safety processes — applying professional PMO governance and issue-tracking discipline",
+            "Managed corrective-action follow-up end to end — escalating non-conformances and verifying resolution through structured RAID and issue-management practices",
             "Trained new team members on standardized testing and inspection procedures",
           ],
         },
@@ -191,11 +193,11 @@ export const content: Record<Lang, SiteContent> = {
       categories: [
         {
           category: "PM / Collaboration",
-          tools: ["Jira", "Confluence", "Trello", "Slack", "MS Project", "MS Office"],
+          tools: ["Jira", "Confluence", "Trello", "Slack", "MS Teams", "MS Project"],
         },
         {
           category: "Modeling / Documentation",
-          tools: ["UML", "Visio", "Enterprise Architect"],
+          tools: ["Visio", "UML", "Mermaid", "PlantUML"],
         },
         {
           category: "Delivery Practices",
@@ -208,14 +210,14 @@ export const content: Record<Lang, SiteContent> = {
       items: [
         {
           title: "B.Sc. Computer Science Engineering",
-          subtitle: "Minor: Software Engineering",
-          institution: "Pontificia Universidad Católica de Valparaíso",
+          subtitle: "Software Engineering focus",
+          institution: "Pontificia Universidad Católica de Valparaíso (Chile)",
           year: "2010",
         },
         {
           title: "IT Project Management",
-          subtitle: "PMBOK® Guide 5th Edition-based",
-          institution: "Federico Santa María Technical University",
+          subtitle: "Certification",
+          institution: "Universidad Técnica Federico Santa María (Chile)",
           year: "2018",
         },
         {
@@ -228,12 +230,12 @@ export const content: Record<Lang, SiteContent> = {
       languagesHeading: "Languages",
       languages: [
         { language: "Spanish", level: "Native" },
-        { language: "English", level: "IELTS 6.0 (B2) • EAP Level 9" },
+        { language: "English", level: "Professional working proficiency · IELTS 6.0, 2021" },
       ],
     },
     contact: {
       heading: "Let's Connect",
-      subtitle: "Open to Project Coordinator and PMO opportunities",
+      subtitle: "Open to new opportunities — Project Coordination, PMO & related roles that draw on transferable delivery skills",
       locationLabel: "Valparaíso, Chile",
       rights: "All rights reserved.",
     },
@@ -271,15 +273,17 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           title: "Ágil y Cascada",
-          description: "Ceremonias, planificación de sprints, seguimiento y soporte a entregas tradicionales",
+          description:
+            "Manejo fluido de modelos de entrega híbridos, adaptando prácticas Ágiles y Cascada a cada proyecto y sus interesados",
         },
         {
           title: "Documentación y Gobernanza",
-          description: "Minutas, elementos de acción, auditorías y cumplimiento de estándares",
+          description:
+            "Documentación y gobernanza de proyectos rigurosa que mantiene la entrega auditable, conforme y transparente",
         },
         {
           title: "Mejora de Procesos",
-          description: "Mentalidad Lean, mejora continua y ejecución orientada al cumplimiento",
+          description: "Mejora continua con enfoque Lean que eleva la calidad, consistencia y eficiencia de la entrega",
         },
       ],
     },
@@ -288,8 +292,8 @@ export const content: Record<Lang, SiteContent> = {
       subtitle: "Una década coordinando la entrega de software en banca, sector público y automotriz",
       roles: [
         {
-          title: "Transición Profesional — Reubicación a Chile",
-          company: "Disponible para roles de Coordinación de Proyectos / PMO",
+          title: "Reubicación a Chile",
+          company: "Disponible para nuevas oportunidades — Coordinación de Proyectos, PMO y más",
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Presente",
           highlights: [
@@ -303,9 +307,9 @@ export const content: Record<Lang, SiteContent> = {
           period: "Ago 2022 – Nov 2025",
           highlights: [
             "Realicé auditorías de cumplimiento programadas frente a estándares de seguridad locales e internacionales, documentando hallazgos y dando seguimiento a cada incidencia hasta su cierre",
-            "Contribuí a iniciativas de mejora continua Lean — trabajo estandarizado, reducción de desperdicios y disciplina de procesos en la línea de producción",
-            "Responsable de la documentación y reportería de calidad de procesos críticos de seguridad — aplicando la misma disciplina de gobernanza usada en el seguimiento de estado e incidencias en la PMO",
-            "Gestioné el seguimiento de acciones correctivas de principio a fin: escalé no conformidades y verifiqué su resolución (directamente análogo a la gestión RAID / de incidencias)",
+            "Contribuí a iniciativas de mejora continua Lean — trabajo estandarizado, reducción de desperdicios y disciplina de procesos",
+            "Responsable de la documentación y reportería de calidad de procesos críticos de seguridad — aplicando disciplina profesional de gobernanza y seguimiento de incidencias propia de una PMO",
+            "Gestioné el seguimiento de acciones correctivas de principio a fin — escalando no conformidades y verificando su resolución mediante prácticas estructuradas de gestión RAID y de incidencias",
             "Capacité a nuevos integrantes del equipo en procedimientos estandarizados de prueba e inspección",
           ],
         },
@@ -351,11 +355,11 @@ export const content: Record<Lang, SiteContent> = {
       categories: [
         {
           category: "Gestión / Colaboración",
-          tools: ["Jira", "Confluence", "Trello", "Slack", "MS Project", "MS Office"],
+          tools: ["Jira", "Confluence", "Trello", "Slack", "MS Teams", "MS Project"],
         },
         {
           category: "Modelado / Documentación",
-          tools: ["UML", "Visio", "Enterprise Architect"],
+          tools: ["Visio", "UML", "Mermaid", "PlantUML"],
         },
         {
           category: "Prácticas de Entrega",
@@ -368,14 +372,14 @@ export const content: Record<Lang, SiteContent> = {
       items: [
         {
           title: "Ingeniería en Computación (B.Sc.)",
-          subtitle: "Mención: Ingeniería de Software",
-          institution: "Pontificia Universidad Católica de Valparaíso",
+          subtitle: "Con enfoque en Ingeniería de Software",
+          institution: "Pontificia Universidad Católica de Valparaíso (Chile)",
           year: "2010",
         },
         {
           title: "Gestión de Proyectos TI",
-          subtitle: "Basado en la Guía PMBOK® 5.ª edición",
-          institution: "Universidad Técnica Federico Santa María",
+          subtitle: "Certificación",
+          institution: "Universidad Técnica Federico Santa María (Chile)",
           year: "2018",
         },
         {
@@ -388,12 +392,13 @@ export const content: Record<Lang, SiteContent> = {
       languagesHeading: "Idiomas",
       languages: [
         { language: "Español", level: "Nativo" },
-        { language: "Inglés", level: "IELTS 6.0 (B2) • EAP Nivel 9" },
+        { language: "Inglés", level: "Competencia profesional · IELTS 6.0, 2021" },
       ],
     },
     contact: {
       heading: "Conversemos",
-      subtitle: "Disponible para oportunidades de Coordinación de Proyectos y PMO",
+      subtitle:
+        "Disponible para nuevas oportunidades — Coordinación de Proyectos, PMO y roles afines que aprovechan experiencia transferible en entrega de proyectos",
       locationLabel: "Valparaíso, Chile",
       rights: "Todos los derechos reservados.",
     },
