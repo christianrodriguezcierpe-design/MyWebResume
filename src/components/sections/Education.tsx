@@ -9,7 +9,7 @@ const Education = () => {
   const { heading, items, languagesHeading, languages } = t.education;
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-secondary/50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Education */}
@@ -49,9 +49,13 @@ const Education = () => {
             </div>
             <div className="space-y-4">
               {languages.map((lang) => (
-                <div key={lang.language} className="flex justify-between items-center">
+                <div key={lang.language} className="flex justify-between items-start">
                   <span className="font-medium text-foreground">{lang.language}</span>
-                  <span className="text-muted-foreground text-sm">{lang.level}</span>
+                  {/* level may carry a line break (e.g. proficiency / certification on
+                      separate lines) — whitespace-pre-line renders that literally */}
+                  <span className="text-muted-foreground text-sm text-right whitespace-pre-line">
+                    {lang.level}
+                  </span>
                 </div>
               ))}
             </div>

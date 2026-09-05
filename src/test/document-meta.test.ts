@@ -67,12 +67,12 @@ describe("index.html fallback", () => {
   });
 
   it("ships the English description in every description tag", () => {
-    const descriptions = [...html.matchAll(/content="([^"]*10\+[^"]*)"/g)].map((m) => m[1]);
+    // Count occurrences of the exact copy rather than a substring like "10+",
+    // so this stays a guard against drift instead of coupling to today's wording.
+    const escaped = content.en.meta.description.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const matches = [...html.matchAll(new RegExp(`content="${escaped}"`, "g"))];
 
-    expect(descriptions.length).toBeGreaterThanOrEqual(3);
-    for (const description of descriptions) {
-      expect(description).toBe(content.en.meta.description);
-    }
+    expect(matches.length).toBeGreaterThanOrEqual(3);
   });
 
   it("declares every tag applyDocumentMeta rewrites", () => {

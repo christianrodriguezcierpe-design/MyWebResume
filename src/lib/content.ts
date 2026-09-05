@@ -37,6 +37,12 @@ export interface LanguageEntry {
   level: string;
 }
 
+export interface SkillsBlock {
+  heading: string;
+  subtitle: string;
+  items: string[];
+}
+
 export interface SiteContent {
   // Drives the document title and description tags; see lib/documentMeta.ts.
   meta: {
@@ -54,6 +60,7 @@ export interface SiteContent {
     subtitle: string;
     items: CompetencyItem[]; // order must match the icon array in Competencies.tsx
   };
+  skills: SkillsBlock;
   experience: {
     heading: string;
     subtitle: string;
@@ -83,13 +90,13 @@ export const content: Record<Lang, SiteContent> = {
     meta: {
       title: "Christian Rodriguez | IT Project Coordinator",
       description:
-        "Christian Rodriguez — IT Project Coordinator and Software Delivery Specialist with 10+ years of experience in banking, public sector, and automotive industries.",
+        "Christian Rodriguez — IT Project Coordinator and Software Delivery Specialist with more than 10 years of experience in banking, public sector, and automotive industries.",
     },
     hero: {
       greeting: "Hello, I'm",
       role: "Project Coordinator & PMO Specialist",
       summary:
-        "10+ years coordinating software delivery across banking, public sector, and automotive — from PMO portfolio tracking and executive reporting to stakeholder alignment and delivery governance. Detail-driven, compliance-minded, and comfortable in both Agile and Waterfall.",
+        "More than 10 years coordinating software delivery across banking, public sector, and automotive — from PMO portfolio tracking and executive reporting to stakeholder alignment and delivery governance. Detail-driven, compliance-minded, and comfortable in both Agile and Waterfall.",
       location: "Valparaíso, Chile",
     },
     competencies: {
@@ -99,18 +106,21 @@ export const content: Record<Lang, SiteContent> = {
       items: [
         {
           title: "Project Coordination",
-          description: "Scope, schedule, risks, and dependency management across complex portfolios",
+          description:
+            "End-to-end ownership of scope, schedule, risk, and cross-project dependencies across complex portfolios",
         },
         {
           title: "PMO Reporting",
-          description: "Status tracking, milestone monitoring, KPIs, and executive-level updates",
+          description:
+            "Clear, consistent reporting — milestone tracking, KPIs, and executive-level visibility into delivery status",
         },
         {
           title: "Stakeholder Management",
-          description: "Liaison between clients, leadership, and cross-functional delivery teams",
+          description:
+            "Trusted liaison between clients, leadership, and cross-functional teams, keeping expectations aligned throughout delivery",
         },
         {
-          title: "Agile & Waterfall",
+          title: "Project Management Methodologies",
           description:
             "Fluent across hybrid delivery models, adapting Agile and Waterfall practices to fit each project and its stakeholders",
         },
@@ -121,8 +131,23 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           title: "Process Improvement",
-          description: "Lean-informed continuous improvement that raises delivery quality, consistency, and efficiency",
+          description:
+            "Continuous improvement that leverages core Lean principles to raise delivery quality, consistency, and efficiency",
         },
+      ],
+    },
+    skills: {
+      heading: "Personal Skills",
+      subtitle: "Complementary strengths that translate across teams, industries, and roles",
+      items: [
+        "Analytical Thinking",
+        "Problem Solving",
+        "Attention to Detail",
+        "Strong Multitasking & Prioritization Skills",
+        "Teamwork and Collaboration",
+        "Excellent Interpersonal Skills",
+        "Highly Versatile and Adaptable",
+        "Goal-Oriented",
       ],
     },
     experience: {
@@ -135,7 +160,7 @@ export const content: Record<Lang, SiteContent> = {
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Present",
           highlights: [
-            "Relocated from Canada to Chile. Open to on-site roles in Chile or Canada (open to relocation), and to remote roles worldwide in English or Spanish.",
+            "Relocated from Canada to Chile. Open to on-site roles in Chile & Canada (open to relocation), and to remote roles worldwide English & Spanish.",
           ],
         },
         {
@@ -147,8 +172,8 @@ export const content: Record<Lang, SiteContent> = {
             "Conducted scheduled compliance audits against local and international safety standards, documenting findings and tracking each issue through to closure",
             "Contributed to Lean continuous-improvement initiatives — standardized work, waste reduction, and process discipline",
             "Owned quality documentation and reporting for critical safety processes — applying professional PMO governance and issue-tracking discipline",
-            "Managed corrective-action follow-up end to end — escalating non-conformances and verifying resolution through structured RAID and issue-management practices",
-            "Trained new team members on standardized testing and inspection procedures",
+            "Managed corrective-action follow-up end to end — escalating non-conformities and verifying resolution through structured RAID and issue-management practices",
+            "Facilitated comprehensive training and integration of new team members on internal methodologies and testing standards for inspection and regulatory compliance",
           ],
         },
         {
@@ -158,7 +183,8 @@ export const content: Record<Lang, SiteContent> = {
           period: "Feb 2012 – Jul 2021",
           highlights: [
             "Coordinated an average portfolio of 20+ concurrent software projects within the PMO, plus 5-10 recurring, ongoing services, maintaining single-source visibility over delivery status, risks, and cross-project dependencies",
-            "Produced weekly milestone, status, and KPI reporting for leadership and clients, supporting a >95% project success rate across the portfolio",
+            "Portfolio included mission-critical, customer-facing systems — including nationwide ATM and POS networks — relied on daily by the country's entire banked population",
+            "Produced periodic milestone, status, and KPI reporting for stakeholders and clients, supporting a 95%+ project success rate across the portfolio",
             "Served as primary liaison between clients and internal delivery teams, translating business needs into clear scope and managing expectations across the delivery cycle",
             "Maintained RAID logs and delivery documentation, standardizing status tracking and issue escalation across the PMO",
             "Partnered with project leaders on planning, prioritization, and resource allocation to keep delivery on schedule and within budget",
@@ -210,7 +236,7 @@ export const content: Record<Lang, SiteContent> = {
       items: [
         {
           title: "B.Sc. Computer Science Engineering",
-          subtitle: "Software Engineering focus",
+          subtitle: "Software Engineering",
           institution: "Pontificia Universidad Católica de Valparaíso (Chile)",
           year: "2010",
         },
@@ -230,12 +256,13 @@ export const content: Record<Lang, SiteContent> = {
       languagesHeading: "Languages",
       languages: [
         { language: "Spanish", level: "Native" },
-        { language: "English", level: "Professional working proficiency · IELTS 6.0, 2021" },
+        { language: "English", level: "Professional working proficiency\nIELTS 2021" },
       ],
     },
     contact: {
       heading: "Let's Connect",
-      subtitle: "Open to new opportunities — Project Coordination, PMO & related roles that draw on transferable delivery skills",
+      subtitle:
+        "Open to new opportunities across any field — my coordination, delivery, and interpersonal skills are built to transfer well beyond IT and project management",
       locationLabel: "Valparaíso, Chile",
       rights: "All rights reserved.",
     },
@@ -251,7 +278,7 @@ export const content: Record<Lang, SiteContent> = {
       greeting: "Hola, soy",
       role: "Coordinador de Proyectos y Especialista PMO",
       summary:
-        "Más de 10 años coordinando la entrega de software en banca, sector público y automotriz — desde el seguimiento de portafolios y la reportería ejecutiva en la PMO hasta la alineación de interesados y la gobernanza de entregas. Orientado al detalle, con foco en el cumplimiento y cómodo tanto en Ágil como en Cascada.",
+        "Más de 10 años coordinando la entrega de software en banca, sector público y automotriz — desde el seguimiento de portafolios y los reportes ejecutivos en la PMO hasta la alineación de interesados y la gobernanza de entregas. Orientado al detalle, con foco en el cumplimiento y cómodo tanto en Ágil como en Cascada.",
       location: "Valparaíso, Chile",
     },
     competencies: {
@@ -261,20 +288,23 @@ export const content: Record<Lang, SiteContent> = {
       items: [
         {
           title: "Coordinación de Proyectos",
-          description: "Gestión de alcance, cronograma, riesgos y dependencias en portafolios complejos",
+          description:
+            "Responsabilidad integral sobre alcance, cronograma, riesgos y dependencias entre proyectos en portafolios complejos",
         },
         {
-          title: "Reportería PMO",
-          description: "Seguimiento de estado, monitoreo de hitos, KPIs y actualizaciones a nivel ejecutivo",
+          title: "Reportes PMO",
+          description:
+            "Reportes claros y consistentes — seguimiento de hitos, KPIs y visibilidad ejecutiva del estado de entrega",
         },
         {
           title: "Gestión de Interesados",
-          description: "Enlace entre clientes, liderazgo y equipos de entrega multifuncionales",
+          description:
+            "Enlace de confianza entre clientes, liderazgo y equipos multifuncionales, manteniendo las expectativas alineadas durante toda la entrega",
         },
         {
-          title: "Ágil y Cascada",
+          title: "Metodologías de Gestión de Proyectos",
           description:
-            "Manejo fluido de modelos de entrega híbridos, adaptando prácticas Ágiles y Cascada a cada proyecto y sus interesados",
+            "Manejo fluido de modelos de entrega híbridos, adaptando prácticas Ágiles y Tradicionales a cada proyecto y sus interesados",
         },
         {
           title: "Documentación y Gobernanza",
@@ -287,6 +317,20 @@ export const content: Record<Lang, SiteContent> = {
         },
       ],
     },
+    skills: {
+      heading: "Habilidades Personales",
+      subtitle: "Fortalezas complementarias que se traducen en distintos equipos, industrias y roles",
+      items: [
+        "Pensamiento Analítico",
+        "Resolución de Problemas",
+        "Atención al Detalle",
+        "Fuerte Capacidad de Multitarea y Priorización",
+        "Trabajo en Equipo y Colaboración",
+        "Excelentes Habilidades Interpersonales",
+        "Alta Versatilidad y Adaptabilidad",
+        "Orientación a Objetivos",
+      ],
+    },
     experience: {
       heading: "Experiencia Profesional",
       subtitle: "Una década coordinando la entrega de software en banca, sector público y automotriz",
@@ -297,7 +341,7 @@ export const content: Record<Lang, SiteContent> = {
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Presente",
           highlights: [
-            "Reubicación desde Canadá a Chile. Disponible para roles presenciales en Chile o Canadá (abierto a reubicación) y para roles remotos en cualquier parte del mundo, en inglés o español.",
+            "Reubicación desde Canadá a Chile. Disponible para roles presenciales en Chile y Canadá (abierto a reubicación) y para roles remotos en cualquier parte del mundo, inglés y español.",
           ],
         },
         {
@@ -308,9 +352,9 @@ export const content: Record<Lang, SiteContent> = {
           highlights: [
             "Realicé auditorías de cumplimiento programadas frente a estándares de seguridad locales e internacionales, documentando hallazgos y dando seguimiento a cada incidencia hasta su cierre",
             "Contribuí a iniciativas de mejora continua Lean — trabajo estandarizado, reducción de desperdicios y disciplina de procesos",
-            "Responsable de la documentación y reportería de calidad de procesos críticos de seguridad — aplicando disciplina profesional de gobernanza y seguimiento de incidencias propia de una PMO",
+            "Responsable de la documentación y reportes de calidad de procesos críticos de seguridad — aplicando disciplina profesional de gobernanza y seguimiento de incidencias propia de una PMO",
             "Gestioné el seguimiento de acciones correctivas de principio a fin — escalando no conformidades y verificando su resolución mediante prácticas estructuradas de gestión RAID y de incidencias",
-            "Capacité a nuevos integrantes del equipo en procedimientos estandarizados de prueba e inspección",
+            "Facilité la capacitación integral y la integración de nuevos miembros del equipo en las metodologías internas y los estándares de prueba para inspección y cumplimiento normativo",
           ],
         },
         {
@@ -320,8 +364,9 @@ export const content: Record<Lang, SiteContent> = {
           period: "Feb 2012 – Jul 2021",
           highlights: [
             "Coordiné una cartera promedio de más de 20 proyectos de software simultáneos dentro de la PMO, además de 5 a 10 servicios recurrentes y permanentes, manteniendo visibilidad centralizada del estado de entrega, riesgos y dependencias entre proyectos",
-            "Elaboré reportería semanal de hitos, estado y KPIs para el liderazgo y los clientes, contribuyendo a una tasa de éxito de proyectos superior al 95% en la cartera",
-            "Actué como enlace principal entre los clientes y los equipos internos de entrega, traduciendo las necesidades del negocio en un alcance claro y gestionando expectativas durante todo el ciclo de entrega",
+            "La cartera incluía sistemas críticos de cara al cliente final — entre ellos redes nacionales de cajeros automáticos (ATM) y puntos de venta (POS) — utilizados a diario por toda la población bancarizada del país",
+            "Responsable de la elaboración de reportes periódicos de hitos, estado y KPIs dirigidos a stakeholders y clientes, contribuyendo a una tasa de éxito de proyectos superior al 95% de la cartera",
+            "Actué como enlace principal entre los clientes y los equipos internos de proyecto, traduciendo las necesidades del negocio en un alcance claro y gestionando expectativas durante todo el ciclo de entrega",
             "Mantuve registros RAID y documentación de entrega, estandarizando el seguimiento de estado y el escalamiento de incidencias en la PMO",
             "Colaboré con los líderes de proyecto en la planificación, priorización y asignación de recursos para cumplir los plazos y el presupuesto",
           ],
@@ -371,8 +416,8 @@ export const content: Record<Lang, SiteContent> = {
       heading: "Educación y Formación",
       items: [
         {
-          title: "Ingeniería en Computación (B.Sc.)",
-          subtitle: "Con enfoque en Ingeniería de Software",
+          title: "Ingeniería de Ejecución en Informática",
+          subtitle: "Ingeniería de Software",
           institution: "Pontificia Universidad Católica de Valparaíso (Chile)",
           year: "2010",
         },
@@ -392,13 +437,13 @@ export const content: Record<Lang, SiteContent> = {
       languagesHeading: "Idiomas",
       languages: [
         { language: "Español", level: "Nativo" },
-        { language: "Inglés", level: "Competencia profesional · IELTS 6.0, 2021" },
+        { language: "Inglés", level: "Competencia profesional\nIELTS 2021" },
       ],
     },
     contact: {
-      heading: "Conversemos",
+      heading: "Pongámonos en contacto",
       subtitle:
-        "Disponible para nuevas oportunidades — Coordinación de Proyectos, PMO y roles afines que aprovechan experiencia transferible en entrega de proyectos",
+        "Disponible para nuevas oportunidades en cualquier área — mis habilidades de coordinación, entrega e interpersonales se traducen fácilmente más allá de TI y la gestión de proyectos",
       locationLabel: "Valparaíso, Chile",
       rights: "Todos los derechos reservados.",
     },

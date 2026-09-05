@@ -116,4 +116,4 @@ manual configuration.
 
 ## Origin
 
-Scaffolded from a Vite + React + shadcn/ui template (Lovable) and since rewritten.
+Scaffolded from a generic Vite + React + shadcn/ui template and since rewritten.

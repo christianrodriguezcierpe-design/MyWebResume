@@ -15,7 +15,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-accent font-medium mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p
+            className="text-xl md:text-2xl text-accent font-medium mb-4 animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
             {hero.greeting}
           </p>
 
