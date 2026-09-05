@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Hero = () => {
   const { t } = useLanguage();
   const hero = t.hero;
+  const { email } = t.contact;
 
   return (
     <section className="bg-hero min-h-[70vh] flex items-center justify-center relative overflow-hidden">
@@ -55,8 +56,8 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-accent" />
-              <a href="mailto:christian.rodriguez.cierpe@gmail.com" className="hover:text-accent transition-colors">
-                christian.rodriguez.cierpe@gmail.com
+              <a href={`mailto:${email}`} className="hover:text-accent transition-colors">
+                {email}
               </a>
             </div>
           </div>

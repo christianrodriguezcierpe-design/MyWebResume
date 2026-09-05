@@ -91,6 +91,15 @@ describe("content", () => {
     }
   });
 
+  it("keeps contact details identical across languages and well-formed", () => {
+    // Hero.tsx, Contact.tsx and the JobHunt importer all read these; they are
+    // not translated, so a per-language drift would be a typo, not a locale.
+    expect(content.es.contact.email).toBe(content.en.contact.email);
+    expect(content.es.contact.github).toBe(content.en.contact.github);
+    expect(content.en.contact.email).toMatch(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+    expect(content.en.contact.github).toMatch(/^https:\/\/github\.com\//);
+  });
+
   it("has no empty strings", () => {
     const empties: string[] = [];
     const walk = (value: unknown, path: string) => {

@@ -82,6 +82,10 @@ export interface SiteContent {
     subtitle: string;
     locationLabel: string;
     rights: string;
+    // Same value in every language. Rendered by Hero.tsx and Contact.tsx, and
+    // read by the JobHunt pipeline importer as the only source of contact data.
+    email: string;
+    github: string;
   };
 }
 
@@ -265,6 +269,8 @@ export const content: Record<Lang, SiteContent> = {
         "Open to new opportunities across any field — my coordination, delivery, and interpersonal skills are built to transfer well beyond IT and project management",
       locationLabel: "Valparaíso, Chile",
       rights: "All rights reserved.",
+      email: "christian.rodriguez.cierpe@gmail.com",
+      github: "https://github.com/christianrodriguezcierpe-design/MyWebResume/tree/main",
     },
   },
 
@@ -446,6 +452,8 @@ export const content: Record<Lang, SiteContent> = {
         "Disponible para nuevas oportunidades en cualquier área — mis habilidades de coordinación, entrega e interpersonales se traducen fácilmente más allá de TI y la gestión de proyectos",
       locationLabel: "Valparaíso, Chile",
       rights: "Todos los derechos reservados.",
+      email: "christian.rodriguez.cierpe@gmail.com",
+      github: "https://github.com/christianrodriguezcierpe-design/MyWebResume/tree/main",
     },
   },
 };
