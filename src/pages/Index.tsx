@@ -4,6 +4,7 @@ import PersonalSkills from "@/components/sections/PersonalSkills";
 import Experience from "@/components/sections/Experience";
 import Tools from "@/components/sections/Tools";
 import Education from "@/components/sections/Education";
+import Availability from "@/components/sections/Availability";
 import Contact from "@/components/sections/Contact";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Experience />
       <Tools />
       <Education />
+      <Availability />
       <Contact />
     </main>
   );

@@ -14,7 +14,7 @@ const Tools = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((cat) => (
             <div key={cat.category} className="text-center">
               <h3 className="text-lg font-semibold text-foreground mb-4 font-sans">
