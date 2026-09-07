@@ -37,6 +37,14 @@ export interface LanguageEntry {
   level: string;
 }
 
+export interface AvailabilityItem {
+  // Icons are resolved from this key in Availability.tsx, not by array index —
+  // unlike competencies/education, so reordering or translating cannot misalign them.
+  key: "relocation" | "workModes" | "license";
+  label: string;
+  value: string;
+}
+
 export interface SkillsBlock {
   heading: string;
   subtitle: string;
@@ -76,6 +84,10 @@ export interface SiteContent {
     items: EducationItem[]; // order must match the icon array in Education.tsx
     languagesHeading: string;
     languages: LanguageEntry[];
+  };
+  availability: {
+    heading: string;
+    items: AvailabilityItem[];
   };
   contact: {
     heading: string;
@@ -164,7 +176,7 @@ export const content: Record<Lang, SiteContent> = {
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Present",
           highlights: [
-            "Relocated from Canada to Chile. Open to on-site roles in Chile & Canada (open to relocation), and to remote roles worldwide English & Spanish.",
+            "Relocated from Canada to Chile and currently available for new project coordination and delivery roles",
           ],
         },
         {
@@ -206,32 +218,38 @@ export const content: Record<Lang, SiteContent> = {
           ],
         },
         {
-          title: "Project Manager Assistant",
+          title: "Project Manager Assistant — Vendor selection, Banking",
           company: "TInet Informatics Solutions",
           location: "Santiago, Chile",
           period: "Sep 2010 – Mar 2011",
           highlights: [
-            "Supported a vendor adjudication process for a major bank, running documentation reviews and compliance checks against tender requirements",
-            "Consolidated findings into structured summaries and issue logs to support procurement decision-making",
+            "Supported recurring vendor selection process for major banking institution custom software development needs",
+            "Reviewed incoming bids against each tender's mandatory admission requirements and weighted evaluation criteria, flagging non-compliant submissions ahead of evaluation",
+            "Consolidated review findings into structured summaries and issue logs that the evaluation panels used to support their award decisions",
+            "Maintained the documentation trail across all tenders, with versioned records and traceable findings so each award could withstand challenges from unsuccessful bidders",
           ],
         },
       ],
     },
     tools: {
-      heading: "Tools & Methods",
+      heading: "Management Methodologies & Tools",
       subtitle: "Proficient in industry-standard tools and methodologies for effective project delivery",
       categories: [
         {
-          category: "PM / Collaboration",
+          category: "PM & Collaboration",
           tools: ["Jira", "Confluence", "Trello", "Slack", "MS Teams", "MS Project"],
         },
         {
-          category: "Modeling / Documentation",
+          category: "Modeling & Documentation",
           tools: ["Visio", "UML", "Mermaid", "PlantUML"],
         },
         {
           category: "Delivery Practices",
           tools: ["Agile/Scrum", "Waterfall", "Lean", "Milestone Tracking", "RAID Logs", "KPI Reporting"],
+        },
+        {
+          category: "Business & Productivity",
+          tools: ["ERP / SAP", "MS Excel", "MS Word", "MS PowerPoint"],
         },
       ],
     },
@@ -261,6 +279,26 @@ export const content: Record<Lang, SiteContent> = {
       languages: [
         { language: "Spanish", level: "Native" },
         { language: "English", level: "Professional working proficiency\nIELTS 2021" },
+      ],
+    },
+    availability: {
+      heading: "Availability & Logistics",
+      items: [
+        {
+          key: "relocation",
+          label: "Relocation",
+          value: "Open to relocating within Chile and abroad",
+        },
+        {
+          key: "workModes",
+          label: "Work Modes",
+          value: "On-site, hybrid, or fully remote",
+        },
+        {
+          key: "license",
+          label: "Driver's License",
+          value: "Class B (Chile)\nClass G (Canada)",
+        },
       ],
     },
     contact: {
@@ -347,7 +385,7 @@ export const content: Record<Lang, SiteContent> = {
           location: "Valparaíso, Chile",
           period: "Nov 2025 – Presente",
           highlights: [
-            "Reubicación desde Canadá a Chile. Disponible para roles presenciales en Chile y Canadá (abierto a reubicación) y para roles remotos en cualquier parte del mundo, inglés y español.",
+            "Me reubiqué desde Canadá a Chile y actualmente estoy disponible para nuevos roles de coordinación y entrega de proyectos",
           ],
         },
         {
@@ -389,32 +427,38 @@ export const content: Record<Lang, SiteContent> = {
           ],
         },
         {
-          title: "Asistente de Jefatura de Proyecto",
+          title: "Asistente de Jefatura de Proyecto — Selección de Proveedores, Banca",
           company: "TInet Informatics Solutions",
           location: "Santiago, Chile",
           period: "Sep 2010 – Mar 2011",
           highlights: [
-            "Apoyé un proceso de adjudicación de proveedores para un banco importante, realizando revisiones de documentación y verificaciones de cumplimiento frente a las bases de licitación",
-            "Consolidé hallazgos en resúmenes estructurados y registros de incidencias para apoyar la toma de decisiones de adquisición",
+            "Apoyé el proceso recurrente de selección de proveedores para desarrollo de software a medida para importante institución bancaria",
+            "Revisé las ofertas frente a los requisitos de admisibilidad y los criterios de evaluación ponderados de cada licitación, detectando las que no cumplían antes de la evaluación",
+            "Consolidé los hallazgos de la revisión en resúmenes estructurados y registros de observaciones que las comisiones evaluadoras utilizaron como respaldo para sus decisiones de adjudicación",
+            "Mantuve la trazabilidad documental de todos los procesos, con registros versionados y hallazgos verificables que permitieran sustentar cada adjudicación ante eventuales impugnaciones de los oferentes no adjudicados",
           ],
         },
       ],
     },
     tools: {
-      heading: "Herramientas y Métodos",
+      heading: "Metodologías y Herramientas de Gestión",
       subtitle: "Dominio de herramientas y metodologías estándar de la industria para una entrega efectiva de proyectos",
       categories: [
         {
-          category: "Gestión / Colaboración",
+          category: "Gestión & Colaboración",
           tools: ["Jira", "Confluence", "Trello", "Slack", "MS Teams", "MS Project"],
         },
         {
-          category: "Modelado / Documentación",
+          category: "Modelado & Documentación",
           tools: ["Visio", "UML", "Mermaid", "PlantUML"],
         },
         {
           category: "Prácticas de Entrega",
           tools: ["Ágil/Scrum", "Cascada", "Lean", "Seguimiento de Hitos", "Registros RAID", "Reportería de KPIs"],
+        },
+        {
+          category: "Negocio & Soporte Operativo",
+          tools: ["ERP / SAP", "MS Excel", "MS Word", "MS PowerPoint"],
         },
       ],
     },
@@ -444,6 +488,26 @@ export const content: Record<Lang, SiteContent> = {
       languages: [
         { language: "Español", level: "Nativo" },
         { language: "Inglés", level: "Competencia profesional\nIELTS 2021" },
+      ],
+    },
+    availability: {
+      heading: "Disponibilidad & Logística",
+      items: [
+        {
+          key: "relocation",
+          label: "Reubicación",
+          value: "Abierto a reubicarme dentro de Chile y en el extranjero",
+        },
+        {
+          key: "workModes",
+          label: "Modalidad de Trabajo",
+          value: "Presencial, híbrida o completamente remota",
+        },
+        {
+          key: "license",
+          label: "Licencia de Conducir",
+          value: "Clase B (Chile)\nClase G (Canadá)",
+        },
       ],
     },
     contact: {
