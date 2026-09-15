@@ -6,19 +6,25 @@ import Tools from "@/components/sections/Tools";
 import Education from "@/components/sections/Education";
 import Availability from "@/components/sections/Availability";
 import Contact from "@/components/sections/Contact";
+import PrintResume from "@/components/PrintResume";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <Competencies />
-      <PersonalSkills />
-      <Experience />
-      <Tools />
-      <Education />
-      <Availability />
-      <Contact />
-    </main>
+    <>
+      {/* print:hidden — PrintResume below is the one-column layout that
+          actually renders when the visitor downloads the PDF. */}
+      <main className="min-h-screen print:hidden">
+        <Hero />
+        <Competencies />
+        <PersonalSkills />
+        <Experience />
+        <Tools />
+        <Education />
+        <Availability />
+        <Contact />
+      </main>
+      <PrintResume />
+    </>
   );
 };
 
