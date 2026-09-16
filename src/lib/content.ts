@@ -257,7 +257,7 @@ export const content: Record<Lang, SiteContent> = {
       heading: "Education & Training",
       items: [
         {
-          title: "B.Sc. Computer Science Engineering",
+          title: "Bachelor's Degree in Computer Science Engineering",
           subtitle: "Software Engineering",
           institution: "Pontificia Universidad Católica de Valparaíso (Chile)",
           year: "2010",
