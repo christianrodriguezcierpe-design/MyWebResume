@@ -14,7 +14,10 @@ const Experience = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* max-w-6xl matches Competencies' container, so the alternating
+            cards below are as wide as those — previously max-w-4xl made
+            each half-width card noticeably narrower. */}
+        <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-border" />
