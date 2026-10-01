@@ -112,7 +112,7 @@ export const content: Record<Lang, SiteContent> = {
       greeting: "Hello, I'm",
       role: "Project Coordinator & PMO Specialist",
       summary:
-        "More than 10 years coordinating software delivery across banking, public sector, and automotive — from PMO portfolio tracking and executive reporting to stakeholder alignment and delivery governance. Detail-driven, compliance-minded, and comfortable in both Agile and Waterfall.",
+        "More than 10 years coordinating software delivery across banking, public sector, and automotive — from PMO portfolio tracking and executive reporting to stakeholder alignment and delivery governance. Detail-driven, compliance-minded, and comfortable in both agile and traditional methodologies.",
       location: "Valparaíso, Chile",
     },
     competencies: {
@@ -143,7 +143,7 @@ export const content: Record<Lang, SiteContent> = {
         {
           title: "Documentation & Governance",
           description:
-            "Rigorous project documentation and governance that keep delivery auditable, compliant, and transparent",
+            "Rigorous project documentation and governance, following PM best practices, that keep delivery auditable, compliant, and transparent",
         },
         {
           title: "Process Improvement",
@@ -232,7 +232,7 @@ export const content: Record<Lang, SiteContent> = {
       ],
     },
     tools: {
-      heading: "Management Methodologies & Tools",
+      heading: "Project Management",
       subtitle: "Proficient in industry-standard tools and methodologies for effective project delivery",
       categories: [
         {
@@ -245,7 +245,7 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           category: "Delivery Practices",
-          tools: ["Agile/Scrum", "Waterfall", "Lean", "Milestone Tracking", "RAID Logs", "KPI Reporting"],
+          tools: ["Agile/Scrum", "Waterfall/Iterative/Incremental", "Lean", "Milestone Tracking", "RAID Logs", "KPI Reporting"],
         },
         {
           category: "Business & Productivity",
@@ -264,13 +264,13 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           title: "IT Project Management",
-          subtitle: "Certification",
+          subtitle: "Certificate",
           institution: "Universidad Técnica Federico Santa María (Chile)",
           year: "2018",
         },
         {
           title: "Scrum & Agile Methodologies Workshop",
-          subtitle: "Certification",
+          subtitle: "Certificate",
           institution: "Optimisa S.A.",
           year: "2019",
         },
@@ -322,7 +322,7 @@ export const content: Record<Lang, SiteContent> = {
       greeting: "Hola, soy",
       role: "Coordinador de Proyectos y Especialista PMO",
       summary:
-        "Más de 10 años coordinando la entrega de software en banca, sector público y automotriz — desde el seguimiento de portafolios y los reportes ejecutivos en la PMO hasta la alineación de interesados y la gobernanza de entregas. Orientado al detalle, con foco en el cumplimiento y cómodo tanto en Ágil como en Cascada.",
+        "Más de 10 años coordinando la entrega de software en banca, sector público y automotriz — desde el seguimiento de portafolios y los reportes ejecutivos en la PMO hasta la alineación de interesados y la gobernanza de entregas. Orientado al detalle, con foco en el cumplimiento y cómodo tanto en metodologías ágiles como tradicionales.",
       location: "Valparaíso, Chile",
     },
     competencies: {
@@ -353,7 +353,7 @@ export const content: Record<Lang, SiteContent> = {
         {
           title: "Documentación y Gobernanza",
           description:
-            "Documentación y gobernanza de proyectos rigurosa que mantiene la entrega auditable, conforme y transparente",
+            "Documentación y gobernanza de proyectos rigurosa, siguiendo buenas prácticas de gestión de proyectos, que mantiene la entrega auditable, conforme y transparente",
         },
         {
           title: "Mejora de Procesos",
@@ -441,7 +441,7 @@ export const content: Record<Lang, SiteContent> = {
       ],
     },
     tools: {
-      heading: "Metodologías y Herramientas de Gestión",
+      heading: "Gestión & Seguimiento de Proyectos",
       subtitle: "Dominio de herramientas y metodologías estándar de la industria para una entrega efectiva de proyectos",
       categories: [
         {
@@ -454,7 +454,7 @@ export const content: Record<Lang, SiteContent> = {
         },
         {
           category: "Prácticas de Entrega",
-          tools: ["Ágil/Scrum", "Cascada", "Lean", "Seguimiento de Hitos", "Registros RAID", "Reportería de KPIs"],
+          tools: ["Ágil/Scrum", "Cascada/Iterativo/Incremental", "Lean", "Seguimiento de Hitos", "Registros RAID", "Reportería de KPIs"],
         },
         {
           category: "Negocio & Soporte Operativo",
