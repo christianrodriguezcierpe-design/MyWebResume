@@ -441,7 +441,7 @@ export const content: Record<Lang, SiteContent> = {
       ],
     },
     tools: {
-      heading: "Gestión & Seguimiento de Proyectos",
+      heading: "Gestión y Seguimiento de Proyectos",
       subtitle: "Dominio de herramientas y metodologías estándar de la industria para una entrega efectiva de proyectos",
       categories: [
         {
