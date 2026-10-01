@@ -200,10 +200,10 @@ export const content: Record<Lang, SiteContent> = {
           highlights: [
             "Coordinated an average portfolio of 20+ concurrent software projects within the PMO, plus 5-10 recurring, ongoing services, maintaining single-source visibility over delivery status, risks, and cross-project dependencies",
             "Portfolio included mission-critical, customer-facing systems — including nationwide ATM and POS networks — relied on daily by the country's entire banked population",
-            "Led weekly project control and follow-up committees with delivery teams and presented progress and project status to senior management, backed by periodic milestone, status, and KPI reporting that supported a 95%+ project success rate across the portfolio",
+            "Led project monitoring and control, maintaining a success rate of over 95% through periodic KPI reporting and weekly status presentations to the executive team",
             "Served as primary liaison between clients and internal delivery teams, translating business needs into clear scope and managing expectations across the delivery cycle",
             "Maintained RAID logs and delivery documentation, standardizing status tracking and issue escalation across the PMO",
-            "Partnered with project leaders on planning, prioritization, and resource allocation to keep delivery on schedule and within budget",
+            "Provided project management support on critical projects, reducing the risk of deviation from strategic guidelines by partnering with project leaders on planning, prioritization, and resource allocation to keep delivery on schedule and within budget",
           ],
         },
         {
@@ -409,10 +409,10 @@ export const content: Record<Lang, SiteContent> = {
           highlights: [
             "Coordiné una cartera promedio de más de 20 proyectos de software simultáneos dentro de la PMO, además de 5 a 10 servicios recurrentes y permanentes, manteniendo visibilidad centralizada del estado de entrega, riesgos y dependencias entre proyectos",
             "La cartera incluía sistemas críticos de cara al cliente final — entre ellos redes nacionales de cajeros automáticos (ATM) y puntos de venta (POS) — utilizados a diario por toda la población bancarizada del país",
-            "Lideré comités semanales de control y seguimiento con los equipos de proyecto y presenté el avance y estado de los proyectos ante la plana ejecutiva, respaldado por reportes periódicos de hitos, estado y KPIs que contribuyeron a una tasa de éxito superior al 95% de la cartera",
+            "Lideré el control y seguimiento de proyectos, manteniendo una tasa de éxito del 95%+ a través de reportes periódicos de KPIs y presentaciones semanales de estatus ante la plana ejecutiva",
             "Actué como enlace principal entre los clientes y los equipos internos de proyecto, traduciendo las necesidades del negocio en un alcance claro y gestionando expectativas durante todo el ciclo de entrega",
             "Mantuve registros RAID y documentación de entrega, estandarizando el seguimiento de estado y el escalamiento de incidencias en la PMO",
-            "Colaboré con los líderes de proyecto en la planificación, priorización y asignación de recursos para cumplir los plazos y el presupuesto",
+            "Brindé apoyo en gestión de proyectos críticos, reduciendo el riesgo de desviaciones respecto de los lineamientos estratégicos, colaborando con los líderes de proyecto en la planificación, priorización y asignación de recursos para cumplir los plazos y el presupuesto",
           ],
         },
         {
