@@ -491,7 +491,7 @@ export const content: Record<Lang, SiteContent> = {
       ],
     },
     availability: {
-      heading: "Disponibilidad & Logística",
+      heading: "Disponibilidad y Logística",
       items: [
         {
           key: "relocation",
