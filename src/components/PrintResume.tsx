@@ -14,6 +14,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 // site's --foreground/--background tokens: those flip with the dark-mode
 // toggle, and printing a dark theme wastes ink and can render oddly in some
 // PDF viewers.
+// Shown in the header below the name — the live site, not the repo. The repo
+// link belongs only at the end of the page (Contact's GitHub icon, reading
+// contact.github), so a reader going there is clearly choosing to view the
+// source rather than stumbling into it from the header.
+const SITE_URL = "christianrodriguezcierpe-design.github.io/MyWebResume";
+
 const PrintResume = () => {
   const { t } = useLanguage();
   const { hero, competencies, skills, experience, tools, education, availability, contact } = t;
@@ -25,7 +31,7 @@ const PrintResume = () => {
           <h1 className="text-2xl font-bold">Christian Rodriguez</h1>
           <p className="text-sm font-semibold">{hero.role}</p>
           <p className="mt-1 text-[9.5px] text-black/70">
-            {hero.location} · {contact.email} · {contact.github.replace("https://", "")}
+            {hero.location} · {contact.email} · {SITE_URL}
           </p>
           <p className="mt-1.5 text-black/80">{hero.summary}</p>
         </header>
