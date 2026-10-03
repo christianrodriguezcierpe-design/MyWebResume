@@ -187,7 +187,7 @@ export const content: Record<Lang, SiteContent> = {
           highlights: [
             "Conducted scheduled compliance audits against local and international safety standards, documenting findings and tracking each issue through to closure",
             "Contributed to Lean continuous-improvement initiatives — standardized work, waste reduction, and process discipline",
-            "Owned quality documentation and reporting for critical safety processes — applying professional PMO governance and issue-tracking discipline",
+            "Owned quality documentation and reporting for critical safety processes — applying professional governance and issue-tracking discipline",
             "Managed corrective-action follow-up end to end — escalating non-conformities and verifying resolution through structured RAID and issue-management practices",
             "Facilitated comprehensive training and integration of new team members on internal methodologies and testing standards for inspection and regulatory compliance",
           ],
@@ -396,7 +396,7 @@ export const content: Record<Lang, SiteContent> = {
           highlights: [
             "Realicé auditorías de cumplimiento programadas frente a estándares de seguridad locales e internacionales, documentando hallazgos y dando seguimiento a cada incidencia hasta su cierre",
             "Contribuí a iniciativas de mejora continua Lean — trabajo estandarizado, reducción de desperdicios y disciplina de procesos",
-            "Responsable de la documentación y reportes de calidad de procesos críticos de seguridad — aplicando disciplina profesional de gobernanza y seguimiento de incidencias propia de una PMO",
+            "Responsable de la documentación y reportes de calidad de procesos críticos de seguridad — aplicando disciplina profesional de gobernanza y seguimiento de incidencias",
             "Gestioné el seguimiento de acciones correctivas de principio a fin — escalando no conformidades y verificando su resolución mediante prácticas estructuradas de gestión RAID y de incidencias",
             "Facilité la capacitación integral y la integración de nuevos miembros del equipo en las metodologías internas y los estándares de prueba para inspección y cumplimiento normativo",
           ],
