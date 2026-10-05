@@ -1,8 +1,8 @@
-import { GraduationCap, Award, Globe } from "lucide-react";
+import { GraduationCap, Award, Globe, Cpu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Icons matched by index to education.items — keep the order in sync.
-const icons = [GraduationCap, Award, Award];
+const icons = [GraduationCap, Award, Award, Cpu];
 
 const Education = () => {
   const { t } = useLanguage();
@@ -22,10 +22,15 @@ const Education = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {items.map((edu, index) => {
               const Icon = icons[index] ?? Award;
+              // A lone card in the last row of the 3-column grid is centered
+              // under the middle column, so it reads as deliberate.
+              const isLastOrphan = index === items.length - 1 && items.length % 3 === 1;
               return (
                 <div
                   key={index}
-                  className="bg-card p-6 rounded-lg shadow-card hover:shadow-card-hover transition-all duration-300 text-center group"
+                  className={`bg-card p-6 rounded-lg shadow-card hover:shadow-card-hover transition-all duration-300 text-center group ${
+                    isLastOrphan ? "md:col-start-2" : ""
+                  }`}
                 >
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent" />

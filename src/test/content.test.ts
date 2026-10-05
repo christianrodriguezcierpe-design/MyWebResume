@@ -87,7 +87,7 @@ describe("content", () => {
     // item silently renders the fallback.
     for (const lang of langs) {
       expect(content[lang].competencies.items).toHaveLength(6);
-      expect(content[lang].education.items).toHaveLength(3);
+      expect(content[lang].education.items).toHaveLength(4);
     }
   });
 
