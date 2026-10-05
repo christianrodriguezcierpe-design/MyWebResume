@@ -274,6 +274,12 @@ export const content: Record<Lang, SiteContent> = {
           institution: "Optimisa S.A.",
           year: "2019",
         },
+        {
+          title: "Agentic AI & Local LLMs",
+          subtitle: "Self-Directed Study",
+          institution: "Personal Projects",
+          year: "2025",
+        },
       ],
       languagesHeading: "Languages",
       languages: [
@@ -482,6 +488,12 @@ export const content: Record<Lang, SiteContent> = {
           subtitle: "Certificación",
           institution: "Optimisa S.A.",
           year: "2019",
+        },
+        {
+          title: "IA Agéntica y LLMs Locales",
+          subtitle: "Autoaprendizaje",
+          institution: "Proyectos Personales",
+          year: "2025",
         },
       ],
       languagesHeading: "Idiomas",
