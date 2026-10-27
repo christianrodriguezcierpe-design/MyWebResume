@@ -98,6 +98,8 @@ describe("content", () => {
     expect(content.es.contact.github).toBe(content.en.contact.github);
     expect(content.en.contact.email).toMatch(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     expect(content.en.contact.github).toMatch(/^https:\/\/github\.com\//);
+    expect(content.es.contact.siteUrl).toBe(content.en.contact.siteUrl);
+    expect(content.en.contact.siteUrl).toMatch(/^https:\/\/.+\/$/);
   });
 
   it("has no empty strings", () => {

@@ -97,7 +97,11 @@ export interface SiteContent {
     // Same value in every language. Rendered by Hero.tsx and Contact.tsx, and
     // read by the JobHunt pipeline importer as the only source of contact data.
     email: string;
+    // The source repository. Reached only from Contact's GitHub icon.
     github: string;
+    // The live site (index.html's og:url). The link to give readers: the print
+    // header shows it, and the JobHunt importer maps it to portfolio_url.
+    siteUrl: string;
   };
 }
 
@@ -315,6 +319,7 @@ export const content: Record<Lang, SiteContent> = {
       rights: "All rights reserved.",
       email: "christian.rodriguez.cierpe@gmail.com",
       github: "https://github.com/christianrodriguezcierpe-design/MyWebResume/tree/main",
+      siteUrl: "https://christianrodriguezcierpe-design.github.io/MyWebResume/",
     },
   },
 
@@ -530,6 +535,7 @@ export const content: Record<Lang, SiteContent> = {
       rights: "Todos los derechos reservados.",
       email: "christian.rodriguez.cierpe@gmail.com",
       github: "https://github.com/christianrodriguezcierpe-design/MyWebResume/tree/main",
+      siteUrl: "https://christianrodriguezcierpe-design.github.io/MyWebResume/",
     },
   },
 };

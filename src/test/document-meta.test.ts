@@ -98,6 +98,11 @@ describe("social preview image", () => {
 
   const SITE = "https://christianrodriguezcierpe-design.github.io/MyWebResume/";
 
+  it("og:url matches contact.siteUrl, the link the print header and JobHunt use", () => {
+    expect(tagContent('property="og:url"')).toBe(SITE);
+    expect(content.en.contact.siteUrl).toBe(SITE);
+  });
+
   it("declares an image for both og and twitter", () => {
     // twitter:card promises summary_large_image; without an image the preview
     // renders bare, which is the failure this guards against.
