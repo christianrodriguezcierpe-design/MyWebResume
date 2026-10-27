@@ -22,6 +22,9 @@ describe("PrintResume", () => {
 
     expect(text).toContain(t.hero.role);
     expect(text).toContain(t.contact.email);
+    // Header shows the live site without scheme; the repo URL never appears.
+    expect(text).toContain("christianrodriguezcierpe-design.github.io/MyWebResume");
+    expect(text).not.toContain(t.contact.github);
     expect(text).toContain(t.competencies.heading);
     expect(text).toContain(t.competencies.items[0].title);
     expect(text).toContain(t.skills.items[0]);
